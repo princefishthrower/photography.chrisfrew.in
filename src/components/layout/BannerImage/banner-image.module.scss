@@ -1,7 +1,7 @@
 $bannerHeight: 40vh;
 
 .bannerImage {
-    position: fixed;
+    position: fixed !important; // gatsby strangely overrides this...
     top: 0;
     left: 0;
     height: $bannerHeight;

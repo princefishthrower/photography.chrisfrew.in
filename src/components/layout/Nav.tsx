@@ -1,11 +1,9 @@
 import { Link } from "gatsby"
 import * as React from "react"
 
-export interface INavProps {}
-
 // Startseite, Ueber mich, Angebote, Kontakt
 
-export function Nav(props: INavProps) {
+export function Nav() {
   return (
     <ul className="nav justify-content-center bg-secondary">
       <li className="nav-item">

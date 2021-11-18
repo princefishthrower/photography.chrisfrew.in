@@ -1,9 +1,6 @@
 import * as React from 'react';
 
-export interface IHomeProps {
-}
-
-export function Home (props: IHomeProps) {
+export function Home () {
   return (
     <div>
         Home

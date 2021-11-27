@@ -1,0 +1,14 @@
+$bannerHeight: 100vh;
+
+.bannerImage {
+    position: fixed !important; // gatsby strangely overrides this...
+    top: 0;
+    left: 0;
+    height: $bannerHeight;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.titleContainer {
+    height: $bannerHeight;
+}

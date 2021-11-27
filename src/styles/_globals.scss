@@ -1,0 +1,55 @@
+html,
+body {
+  background: $primary;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+  }
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+// fancy HR
+// from https://stackoverflow.com/questions/14202089/custom-hr-with-image-character-in-the-center/40169202
+
+hr {
+//   font-family: Arial, sans-serif; /* choose the font you like */
+  text-align: center; /* horizontal centering */
+  line-height: 1px; /* vertical centering */
+  height: 1px; /* gap between the lines */
+  font-size: 1em; /* choose font size you like */
+  border-width: 1px 0; /* top and bottom borders */
+  border-style: solid;
+  border-color: $secondary;
+  margin: 20px 10px; /* 20px space above/below, 10px left/right */
+  overflow: visible;
+    width: 300px;
+  /* ensure 1px gap between borders */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+  color: $secondary;
+  
+}
+
+hr:after {
+  content: "§"; /* section sign */
+  color: $secondary;
+  display: inline; /* for vertical centering and background knockout */
+  background-color: $primary; /* same as background color */
+  padding: 0 0.5em; /* size of background color knockout */
+}

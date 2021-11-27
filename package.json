@@ -1,7 +1,7 @@
 {
-  "name": "verbindungsraum.at",
+  "name": "photography.chrisfrew.in",
   "private": true,
-  "description": "The verbindungsraum website.",
+  "description": "The photography.chrisfrew.in website.",
   "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/princefishthrower/verbindungsraum.at"
+    "url": "https://github.com/princefishthrower/photography.chrisfrew.in.git"
   },
   "bugs": {
-    "url": "https://bitbucket.org/princefishthrower/verbindungsraum.at"
+    "url": "https://github.com/princefishthrower/photography.chrisfrew.in.git/issues"
   }
 }

@@ -30,7 +30,7 @@ export function PhotoMasonry(props: IPhotoMasonryProps) {
           return (
             <Link to={imageLink}>
               <GatsbyImage
-                className=""
+                loading="eager"
                 image={node.childImageSharp.gatsbyImageData}
                 alt={imageData.title}
               />

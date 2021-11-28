@@ -1,13 +1,22 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
+import { useEffect, useState } from "react"
 
 export interface IPhotoMasonryProps {}
 
 export function PhotoMasonry(props: IPhotoMasonryProps) {
+  const [rerendered, setRerendered] = useState(false)
+
+  useEffect(() => {
+    if (rerendered === false) {
+      setRerendered(true)
+    }
+  }, [])
+
   return (
     <section className="photos">
-        <StaticImage
+      <StaticImage
         src="../../../../images/Sonnwendfeier I.jpg"
         alt="Sonnwendfeier I"
         placeholder="blurred"
@@ -41,7 +50,7 @@ export function PhotoMasonry(props: IPhotoMasonryProps) {
         alt="Gargellen III"
         placeholder="blurred"
       />
-       <StaticImage
+      <StaticImage
         src="../../../../images/Sonnwendfeier III.jpg"
         alt="Sonnwendfeier III"
         placeholder="blurred"

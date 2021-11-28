@@ -7,7 +7,7 @@ export function BannerImage() {
     <>
     <StaticImage
         className={bannerStyles.bannerImage}
-        src="../../../../images/Christmas Eve in Pitztal, at Dusk.jpg"
+        src="../../../../../images/Christmas Eve in Pitztal, at Dusk.jpg"
         alt="Meer :)"
         placeholder="blurred"
       />

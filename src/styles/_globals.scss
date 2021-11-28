@@ -32,7 +32,7 @@ hr {
   font-size: 1em; /* choose font size you like */
   border-width: 1px 0; /* top and bottom borders */
   border-style: solid;
-  border-color: $secondary;
+  border-color: $secondary !important;
   margin: 20px 10px; /* 20px space above/below, 10px left/right */
   overflow: visible;
     width: 300px;

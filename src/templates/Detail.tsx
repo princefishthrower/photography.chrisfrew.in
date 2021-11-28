@@ -44,6 +44,7 @@ export default function Detail(props: IDetailProps) {
         <div className="row">
           <div className="col">
             <GatsbyImage
+              loading="eager"
               className="mt-5"
               alt="Bergenstock I"
               image={childImageSharp.gatsbyImageData}

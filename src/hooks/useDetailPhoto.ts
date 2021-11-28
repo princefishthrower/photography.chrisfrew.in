@@ -10,7 +10,6 @@ export const useDetailPhoto = () => {
 
   useEffect(() => {
     const parts = window.location.href.split("/")
-    console.log(parts)
     if (parts.length === 5) {
         const photoName = parts[4]
         if (photoNames.includes(photoName)) {

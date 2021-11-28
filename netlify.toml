@@ -1,6 +1,0 @@
-
-[[redirects]]
-  from = "/detail/*"
-  to = "/detail"
-  status = 200
-  force = true

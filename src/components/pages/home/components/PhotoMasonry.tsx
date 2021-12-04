@@ -11,6 +11,7 @@ export interface IPhotoMasonryProps {
 
 export function PhotoMasonry(props: IPhotoMasonryProps) {
   const { data } = props;
+  console.log(data.allFile.edges.length)
   const [rerendered, setRerendered] = useState(false)
 
   useEffect(() => {

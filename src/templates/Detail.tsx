@@ -4,6 +4,7 @@ import { FancyInformation } from "../components/shared/FancyInformation"
 import { imageConfigItems } from "../config/imageConfigItems"
 import { useEffect, useState } from "react"
 import { Layout } from "../components/layout/Layout"
+import { ArtSignature } from "../components/shared/ArtSignature"
 
 export interface IDetailProps {
   pageContext: {
@@ -43,12 +44,17 @@ export default function Detail(props: IDetailProps) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <GatsbyImage
-              loading="eager"
-              className="mt-5"
-              alt="Bergenstock I"
-              image={childImageSharp.gatsbyImageData}
-            />
+            <div className="position-relative">
+              <GatsbyImage
+                loading="eager"
+                className="mt-5 detail-image"
+                alt="Bergenstock I"
+                image={childImageSharp.gatsbyImageData}
+              />
+              <div className="position-absolute bottom-0 end-0 me-2 mb-4 opacity-50">
+                <ArtSignature />
+              </div>
+            </div>
             <FancyInformation
               title={imageData.title}
               dateTaken={imageData.dateTaken}

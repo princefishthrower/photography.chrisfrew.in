@@ -11,7 +11,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "type-check": "tsc --noEmit",
-    "test": ""
+    "process-images": "python3 dev/process-images.py",
+    "image-doctor": "node dev/image-doctor.js"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

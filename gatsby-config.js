@@ -50,7 +50,7 @@ module.exports = {
         background_color: "#000000",
         theme_color: "#ffffff",
         display: "standalone",
-        icon: `src/images/maskable_icon.png`,
+        icon: `src/assets/icon/maskable_icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },

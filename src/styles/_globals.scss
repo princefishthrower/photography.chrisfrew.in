@@ -4,28 +4,28 @@ body {
 }
 
 h1 {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
 @media (max-width: 800px) {
-    h1 {
-        font-size: 4rem;
-    }
+  h1 {
+    font-size: 4rem;
   }
+}
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 // fancy HR
 // from https://stackoverflow.com/questions/14202089/custom-hr-with-image-character-in-the-center/40169202
 
 hr {
-//   font-family: Arial, sans-serif; /* choose the font you like */
+  //   font-family: Arial, sans-serif; /* choose the font you like */
   text-align: center; /* horizontal centering */
   line-height: 1px; /* vertical centering */
   height: 1px; /* gap between the lines */
@@ -35,7 +35,7 @@ hr {
   border-color: $secondary !important;
   margin: 20px 10px; /* 20px space above/below, 10px left/right */
   overflow: visible;
-    width: 300px;
+  width: 300px;
   /* ensure 1px gap between borders */
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -43,7 +43,6 @@ hr {
   -o-box-sizing: content-box;
   box-sizing: content-box;
   color: $secondary;
-  
 }
 
 hr:after {

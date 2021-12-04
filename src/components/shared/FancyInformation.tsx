@@ -1,7 +1,7 @@
 import * as React from "react"
 
 export interface IFancyInformationProps {
-  title: string;
+  title: string
   dateTaken: string
   comment: string
   attribution: string
@@ -13,19 +13,21 @@ export function FancyInformation(props: IFancyInformationProps) {
     <div className="mb-5 d-flex flex-column justify-content-center align-items-center text-light">
       {/* <hr className="text-light"/> */}
       <div>
-        <span className="fs-1">{"\u201c"}</span>
-        <span className="fst-italic">{title}</span>
-        <span className="fs-1">{"\u201d"}</span>
+        <span className="fst-italic">
+          <span className="fs-1 mx-1">{"\u201c"}</span>
+          {title}
+          <span className="fs-1 mx-1">{"\u201d"}</span>
+        </span>
       </div>
       <div>
-        <span className="fst-italic">{dateTaken}</span>
+        <p className="fst-italic">{dateTaken}</p>
       </div>
-      <div>
-        <span className="fs-1">{"\u201c"}</span>
-        <span className="fst-italic">{comment}</span>
-        <span className="fs-1">{"\u201d"}</span>
+      <div className="d-flex flex-row justify-content-center fst-italic">
+        <p className="fs-1 mx-1 align-self-start">{"\u201c"}</p>
+        <p className="text-center">{comment}</p>
+        <p className="fs-1 mx-1 align-self-start">{"\u201d"}</p>
       </div>
-      <div>- {attribution}</div>
+      <p className="fw-bold">- {attribution}</p>
     </div>
   )
 }

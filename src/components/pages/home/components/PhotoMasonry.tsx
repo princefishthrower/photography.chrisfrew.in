@@ -22,7 +22,7 @@ export function PhotoMasonry(props: IPhotoMasonryProps) {
 
   return (
     <section className="photos">
-      {data.allFile.edges.map(({node}) => {
+      {data.allFile.edges.map(({node}: {node: any}) => {
         const imageData = imageConfigItems.find(
           imageConfigItem => imageConfigItem.title === node.name
         )

@@ -44,15 +44,23 @@ export default function Detail(props: IDetailProps) {
       <div className="container">
         <div className="row">
           <div className="col">
+            <div className="mt-5 d-flex flex-column justify-content-center align-items-center text-light">
+              <div>
+                <h1><u>{imageData.title}</u></h1>
+              </div>
+              <div>
+                <p className="fst-italic">{imageData.dateTaken}</p>
+              </div>
+            </div>
             <div className="position-relative">
               <GatsbyImage
                 loading="eager"
-                className="mt-5 detail-image"
-                alt="Bergenstock I"
+                className="detail-image"
+                alt={name}
                 image={childImageSharp.gatsbyImageData}
               />
-              <div className="position-absolute bottom-0 end-0 me-2 mb-4 opacity-50">
-                <ArtSignature />
+              <div className="position-absolute bottom-0 end-0 me-2 mb-4">
+                <ArtSignature width={75} />
               </div>
             </div>
             <FancyInformation

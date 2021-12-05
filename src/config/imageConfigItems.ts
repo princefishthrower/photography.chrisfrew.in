@@ -36,7 +36,7 @@ export const imageConfigItems = [
         path: '../images/Gargellen III.jpg',
         title: 'Gargellen III',
         dateTaken: 'March 19th, 2021',
-        comment: 'Another trip made purely for the purposes of taking photos - this one is my favorite of the set - a quite and cozy farmhouse still shaking off the feeling of winter, hoping for spring..',
+        comment: 'The third and final picture in the Gargellen series, this one is my favorite. A quite and cozy farmhouse still shaking off the feeling of winter, hoping for spring..',
         attribution: 'The Author'
     },
     {
@@ -94,15 +94,15 @@ export const imageConfigItems = [
         path: '../images/Gargellen II.jpg',
         title: 'Gargellen II',
         dateTaken: 'March 19th, 2021',
-        comment: '',
+        comment: 'The second in the Gargellen series.',
         attribution: 'The Author'
     },
     {
         id: 14,
         path: '../images/Gargellen I.jpg',
-        title: 'Gargellen II',
+        title: 'Gargellen I',
         dateTaken: 'March 19th, 2021',
-        comment: '',
+        comment: 'In March of 2021, there was some fresh snowfall in the Montafon valley. After work I headed in, hoping to get a few shots of what might have been the last for winter. Even on this day following the snowfall, it was already quite warm and the snow was very wet.',
         attribution: 'The Author'
     },
     {
@@ -134,7 +134,7 @@ export const imageConfigItems = [
         path: '../images/Tisis at Blue Hour.jpg',
         title: 'Tisis at Blue Hour',
         dateTaken: 'October 17th, 2020',
-        comment: 'A wide panorama from above Tisis at blue hour',
+        comment: 'A wide panorama from above Tisis at blue hour.',
         attribution: 'The Author'
     },
     {
@@ -142,7 +142,7 @@ export const imageConfigItems = [
         path: '../images/A Streak in the Night.jpg',
         title: 'A Streak in the Night',
         dateTaken: 'June 9th, 2020',
-        comment: 'I remember this June night particularly - a cold snap had covered Austria, which was unfortunate, but it left the sky clear and crisp.',
+        comment: 'I remember this June night particularly - a cold snap had covered Austria. While it was unfortunate that it was so cold in june, the crisp air left the sky clear and clean.',
         attribution: 'The Author'
     },
     {
@@ -150,7 +150,7 @@ export const imageConfigItems = [
         path: '../images/Frastanz Unter Den Drei Schwestern - Dämmerung.jpg',
         title: 'Frastanz Unter Den Drei Schwestern - Dämmerung',
         dateTaken: 'May 22th, 2020',
-        comment: 'Across from the river Ill, there is a nice field with great views of Frastanz. I thought it would be aesthetic to align the church steeple with the Drei Schwestern.',
+        comment: 'Across from the river Ill, there is a nice field with great views of Frastanz. I thought it would be aesthetic to align the church right in the center of the picture, with the Drei Schwestern looming in the distance.',
         attribution: 'The Author'
     },
     {
@@ -158,7 +158,7 @@ export const imageConfigItems = [
         path: '../images/Speeding Home to Feldkirch.jpg',
         title: 'Speeding Home to Feldkirch',
         dateTaken: 'April 25th, 2020',
-        comment: 'A biker leaves his light trail - heading home to Feldkirch.',
+        comment: 'A biker leaves his trail of red light - heading home to Feldkirch.',
         attribution: 'The Author'
     },
     {

@@ -1,10 +1,15 @@
 import * as React from "react"
 
-export function ArtSignature() {
+interface IArtSignature {
+  width: number
+}
+
+export function ArtSignature(props: IArtSignature) {
+  const { width } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={150}
+      width={width}
       viewBox="0 0 317.5 138.27"
     >
       <path

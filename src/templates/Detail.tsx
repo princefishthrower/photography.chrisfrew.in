@@ -52,7 +52,7 @@ export default function Detail(props: IDetailProps) {
                 <p className="fst-italic">{imageData.dateTaken}</p>
               </div>
             </div>
-            <div className="position-relative">
+            <div className="position-relative d-flex flex-row align-items-center justify-content-center">
               <GatsbyImage
                 loading="eager"
                 className="detail-image"

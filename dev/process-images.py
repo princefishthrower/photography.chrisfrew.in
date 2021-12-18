@@ -1,4 +1,5 @@
 import os
+import pathlib
 from PIL import Image
 
 MAX_WIDTH = 1000;
@@ -8,9 +9,17 @@ for file in files:
     # skip annoying mac files
     if file == ".DS_Store":
         continue
-    image = Image.open(os.getcwd() + "/original-images/" + file)
+    # file names
+    base = file.split(".")[0]
+    sourceFilePath = os.getcwd() + "/original-images/" + file
+    targetImagePath = os.getcwd() + '/src/images/' + base + ".jpg"
+
+    image = Image.open(sourceFilePath)
     imageWidth, imageHeight = image.size
     aspectRatio = imageWidth / imageHeight
     height = int(MAX_WIDTH / aspectRatio)
     image = image.resize((MAX_WIDTH, height))
-    image.save(os.getcwd() + '/src/images/' + file)
+    image.save(targetImagePath)
+    print("Successfully converted " + sourceFilePath + " to " + targetImagePath)
+
+print("Done!")

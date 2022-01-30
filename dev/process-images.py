@@ -2,7 +2,7 @@ import os
 import pathlib
 from PIL import Image
 
-MAX_WIDTH = 1000;
+MAX_WIDTH = 1750;
 
 files = os.listdir(os.getcwd() + "/original-images")
 for file in files:

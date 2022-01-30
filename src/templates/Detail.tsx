@@ -16,7 +16,6 @@ export interface IDetailProps {
 }
 
 export default function Detail(props: IDetailProps) {
-  console.log(props)
   const { pageContext } = props
   const { childImageSharp, name } = pageContext
   const imageData = imageConfigItems.find(
@@ -54,6 +53,7 @@ export default function Detail(props: IDetailProps) {
             </div>
             <div className="position-relative d-flex flex-row align-items-center justify-content-center">
               <GatsbyImage
+                
                 loading="eager"
                 className="detail-image"
                 alt={name}
@@ -64,8 +64,6 @@ export default function Detail(props: IDetailProps) {
               </div>
             </div>
             <FancyInformation
-              title={imageData.title}
-              dateTaken={imageData.dateTaken}
               comment={imageData.comment}
               attribution={imageData.attribution}
             />

@@ -8,13 +8,15 @@ export function BannerImage() {
   return (
     <>
       <StaticImage
+        quality={90}
+        loading="eager"
         className={bannerStyles.bannerImage}
         src="../../../../../images/Feldkirch and the Blizzard of 2021.jpg"
         alt="Feldkirch and the Blizzard of 2021"
         placeholder="blurred"
       />
       <div className="position-absolute">
-        <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center">
+        <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
           <FancyText className="d-none d-lg-block" baseSize={200} />
           <FancyText className="d-none d-lg-none d-md-block" baseSize={180} />
           <FancyText className="d-none d-md-none d-sm-block " baseSize={160} />
@@ -25,7 +27,7 @@ export function BannerImage() {
             these moments as best I can through my photographs - moments which
             would otherwise be gone forever."
           </p>
-          <ArtSignature width={150}/>
+          <ArtSignature width={150} />
           <p className="text-light">Christopher Frewin</p>
           <p className="text-light">Landscape Photographer</p>
         </div>

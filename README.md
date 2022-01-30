@@ -2,13 +2,19 @@
 
 Source code for the site photography.chrisfrew.in
 
+# Cookbook when adding a picture:
+
+1. Drop the original full size images into the `origina-images` folder
+2. Add a new entry to `config/imageConfigItems.ts`
+3. Run `python3 dev/process-images.py` to generate the web-ready images
+4. Publish!
+
 ## Processing Images
 
 To process images so they are somewhat sanely sized, run the python script:
 
 ```bash
-cd dev
-python3 process-images.py
+python3 dev/process-images.py
 ```
 
 This converts all files in a `original-images/` folder in the root ( in `.gitignore` to prevent GitHub max repository size issues) to `src/images/`. Currently it is setup to produce images with a max width of 2000px

@@ -18,7 +18,7 @@ export function FancyText(props: IFancyTextProps) {
       <svg height={`${height}px`} width={`${width}px`}>
         <text
           y={y}
-          font-size={fontSize}
+          fontSize={fontSize}
           fill="#ffffff"
           fillOpacity={0.15}
           stroke-width={strokeWidth}

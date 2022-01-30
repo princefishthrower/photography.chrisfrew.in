@@ -280,4 +280,13 @@ export const imageConfigItems = [
     comment: "Bezau at Night III.",
     attribution: "The Author",
   },
+  {
+    id: 34,
+    path: "../images/Hittisau - Evening's Rest.tif",
+    title: "Hittisau - Evening's Rest",
+    dateTaken: "January 22th, 2019",
+    comment:
+      "As the sun settled far beyond the mountains, the temperature sank. But bright lights, good friends, and a glowing hearth are more than enough to keep warm during these months where the northern hemisphere tilts away from the sun.",
+    attribution: "The Author",
+  },
 ]

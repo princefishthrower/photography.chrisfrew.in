@@ -19,6 +19,7 @@ for file in files:
     aspectRatio = imageWidth / imageHeight
     height = int(MAX_WIDTH / aspectRatio)
     image = image.resize((MAX_WIDTH, height))
+    image = image.convert('RGB')
     image.save(targetImagePath)
     print("Successfully converted " + sourceFilePath + " to " + targetImagePath)
 

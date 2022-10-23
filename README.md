@@ -1,13 +1,13 @@
 # photography.chrisfrew.in
 
-Source code for the site photography.chrisfrew.in
+Source code for the website photography.chrisfrew.in
 
-# Cookbook when adding a picture:
+# Recipe when adding a new picture:
 
-1. Drop the original full size images into the `origina-images` folder
-2. Add a new entry to `config/imageConfigItems.ts`
+1. Drop the original full size images (ideally the highest quality image will be the original .TIF, but .jpg or .png will work) into the `original-images` folder
+2. Add the new entry to `config/imageConfigItems.ts`
 3. Run `python3 dev/process-images.py` to generate the web-ready images
-4. Publish!
+4. Push to master to publish the site!
 
 ## Processing Images
 

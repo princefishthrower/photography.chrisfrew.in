@@ -334,4 +334,40 @@ export const imageConfigItems = [
       "The first of what promises to be a series of night shots including my trekking bike.",
     attribution: "The Author",
   },
+  {
+    id: 39,
+    path: "../images/NIGHT RIDER II.png",
+    title: "NIGHT RIDER II",
+    dateTaken: "October 25th, 2022",
+    comment:
+      "The second in the NIGHT RIDER series. Practicing panorama shots.",
+    attribution: "The Author",
+  },
+  {
+    id: 40,
+    path: "../images/NIGHT RIDER III.TIF",
+    title: "NIGHT RIDER II",
+    dateTaken: "November 12th, 2022",
+    comment:
+      "The third in the NIGHT RIDER series.",
+    attribution: "The Author",
+  },
+  {
+    id: 41,
+    path: "../images/Heaven Above, Night Below.TIF",
+    title: "Heaven Above, Night Below",
+    dateTaken: "November 12th, 2022",
+    comment:
+      "The first of a pair of amazing shots, unedited as they were shot from the camera. A cold day in November, with the last tendrils of light still brushing high altitude clouds.",
+    attribution: "The Author",
+  },
+  {
+    id: 42,
+    path: "../images/Heaven Above, Night Below II.TIF",
+    title: "NHeaven Above, Night Below II",
+    dateTaken: "November 12th, 2022",
+    comment:
+      "The second of a pair of amazing shots, unedited as they were shot from the camera. A cold day in November, with the last tendrils of light still brushing high altitude clouds.",
+    attribution: "The Author",
+  },
 ]

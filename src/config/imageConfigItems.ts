@@ -364,10 +364,28 @@ export const imageConfigItems = [
   {
     id: 42,
     path: "../images/Heaven Above, Night Below II.TIF",
-    title: "NHeaven Above, Night Below II",
+    title: "Heaven Above, Night Below II",
     dateTaken: "November 12th, 2022",
     comment:
       "The second of a pair of amazing shots, unedited as they were shot from the camera. A cold day in November, with the last tendrils of light still brushing high altitude clouds.",
+    attribution: "The Author",
+  },
+  {
+    id: 43,
+    path: "../images/COLD FOREST.TIF",
+    title: "COLD FOREST",
+    dateTaken: "December 7th, 2022",
+    comment:
+      "Another large panorama taken about a half hour before the fated COLD MOON shot. Up in Lech I knew there was snow, but not that it was so fresh and still clinging to everything. I stumbled upon this quiet field and couldnt help but admire the multi colored sky trying to figure itself out if it was blue hour or golden hour. Another monster shot, this one is 10310 x 5091, or 52 megapixels. Still have one or two more shots in the bag from this outing!",
+    attribution: "The Author",
+  },
+  {
+    id: 44,
+    path: "../images/COLD MOON.TIF",
+    title: "COLD MOON",
+    dateTaken: "December 7th, 2022",
+    comment:
+      "Little story on what might end up as my Opus Magnum shot. I went up to Lech because I knew they had snow, and actually didn’t really have a plan on what to shoot. After wandering around in the woods for a bit during golden hour, I decided to see if I could actually get to a decent vantage point of the town for dusk, my favorite time to shoot. While crossing a random field to get Lech behind me, I looked back to see how the framing would look. I then noticed a strange light just on the top ridge of a distant mountain, and was rather confused. I thought it was a lift or a mountain chalet, but based on what I knew of the area, there was no life that I knew in that direction. I then realized, as this bright bridge began to increase in size, shouting to myself, “HOLY S(*&#$@, THAT’S THE MOON!”. I had totally forgot it was the December full moon, nick named “Cold Moon”, named so as in ancient times it used to signal the true start of winter. I threw down my pack to rip out my gear as fast as I could, realizing I had a precious few minutes before it would move rightwards and behind the next mountain. For about 15 (very cold) minutes, I captured as many images as I could of this fantastic arrangement, and then, before it could even hide behind the next mountain, the moon was smothered by a heavy cloud that had moved in. Clocking in at 13954 by 5904 pixels, this shot is a monster 82 megapixel shot. No idea when, if ever, this shot will be able to be reproduced - would need some astro folks to comment. A few more goodies to come from this outing, the shooting was quite literally incredible on this day. Swipe through for detailed clips of the full image.",
     attribution: "The Author",
   },
 ]

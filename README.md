@@ -2,10 +2,10 @@
 
 Source code for the website photography.chrisfrew.in
 
-# Recipe when adding a new picture:
+# Recipe for adding new picture(s):
 
 1. Drop the original full size images (ideally the highest quality image will be the original .TIF, but .jpg or .png will work) into the `original-images` folder
-2. Add the new entry to `config/imageConfigItems.ts`
+2. Add the new entries to `config/imageConfigItems.ts`, ensuring the file name is correct
 3. Run `python3 dev/process-images.py` to generate the web-ready images
 4. Push to master to publish the site!
 

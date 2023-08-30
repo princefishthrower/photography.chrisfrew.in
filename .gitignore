@@ -70,3 +70,6 @@ yarn-error.log
 
 # original pictures
 original-images
+
+# Local Netlify folder
+.netlify

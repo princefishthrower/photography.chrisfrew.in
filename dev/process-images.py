@@ -1,5 +1,4 @@
 import os
-import pathlib
 from PIL import Image
 
 MAX_WIDTH = 1750;
@@ -17,6 +16,11 @@ for file in files:
     image = Image.open(sourceFilePath)
     imageWidth, imageHeight = image.size
     aspectRatio = imageWidth / imageHeight
+
+    if aspectRatio == 0:
+        print("\n\nWARNING! Skipping " + sourceFilePath + " because it has no aspect ratio\n\n")
+        continue
+
     height = int(MAX_WIDTH / aspectRatio)
     image = image.resize((MAX_WIDTH, height))
     image = image.convert('RGB')

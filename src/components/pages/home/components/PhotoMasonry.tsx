@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { useEffect, useState } from "react"
-import { imageConfigItems } from "../../../../config/imageConfigItems"
+import imageConfigItems from "../../../../config/imageConfigItems.json"
 import createDetailPageUrl from "../../../../utils/createDetailPageUrl"
 
 export interface IPhotoMasonryProps {

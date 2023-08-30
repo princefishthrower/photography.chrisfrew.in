@@ -1,7 +1,7 @@
 import * as React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { FancyInformation } from "../components/shared/FancyInformation"
-import { imageConfigItems } from "../config/imageConfigItems"
+import imageConfigItems from "../config/imageConfigItems.json"
 import { useEffect, useState } from "react"
 import { Layout } from "../components/layout/Layout"
 import { ArtSignature } from "../components/shared/ArtSignature"

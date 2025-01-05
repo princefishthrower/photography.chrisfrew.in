@@ -10,7 +10,7 @@ export function BannerImage() {
       <StaticImage
         quality={90}
         loading="eager"
-        className={bannerStyles.bannerImage}
+        className={(bannerStyles as any).bannerImage}
         src="../../../../../images/Feldkirch and the Blizzard of 2021.jpg"
         alt="Feldkirch and the Blizzard of 2021"
         placeholder="blurred"

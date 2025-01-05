@@ -1,9 +1,14 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }: any) {
+interface SEOProps {
+  description?: string
+  lang?: string
+  meta?: Array<{ name: string; content: string } | { property: string; content: string }>
+  title: string
+}
+
+export default function SEO({ description, lang = 'en', meta = [], title }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,77 +27,32 @@ function SEO({ description, lang, meta, title }: any) {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: `https://inclub-app.com/inclub_avatar_v1_pink.png`
-        },
-        {
-          property: `og:url`,
-          content: `https://inclub-app.com`,
-        },
-        {
-          property: `og:locale`,
-          content: `de_CH`,
-        },
-        {
-          property: `og:locale`,
-          content: `en_US`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <html lang={lang} />
+      <title>{title} {defaultTitle ? `| ${defaultTitle}` : ''}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://photography.chrisfrew.in/img/img.jpg" />
+      <meta property="og:url" content="https://photography.chrisfrew.in" />
+      <meta property="og:locale" content="de_CH" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={site.siteMetadata?.author || ''} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      {meta.map((metaItem) => {
+        const { name, property, content } = metaItem as any
+        const prop = name ? 'name' : 'property'
+        return (
+          <meta
+            key={name || property}
+            {...{ [prop]: name || property }}
+            content={content}
+          />
+        )
+      })}
+    </>
   )
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO

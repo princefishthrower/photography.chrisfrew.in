@@ -68,7 +68,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# original pictures
+# original pictures (way too big to check in)
 original-images
 
 # Local Netlify folder

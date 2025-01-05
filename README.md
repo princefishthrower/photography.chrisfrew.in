@@ -23,7 +23,7 @@ cd dev && npm run process-images
 
 This script generates smaller images from the large originals. Note that this expects folder `original-images` to exist in the project root and have images in it.
 
-## Run an Image Doctor
+## Run Image Doctor
 
 This is a typescript based tool (technically a separate npm project) that compares the raw images and web images, hinting at any it cannot find
 

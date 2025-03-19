@@ -6,11 +6,11 @@ NOTE THAT DO TO ANNOYING NODE ENCODING, YOU NEED TO REMOVE ANY UMLAUTS FROM PHOT
 
 IF YOU DON'T YOU'LL SEE THEY WILL BE PICKED UP BY THE IMAGE DOCTOR!
 
-# Recipe for adding new picture(s):
+## Recipe for adding new picture(s):
 
 1. Move into the `image-helper` folder.
 2. Install packages with `npm install`
-3. Drop the original full size images (ideally the highest quality image will be the original .TIF, but .jpg or .png will work) into the following Digital Ocean space folder: https://coffee-app.sfo2.cdn.digitaloceanspaces.com/photography.chrisfrew.in/
+3. Drop the original full size images (ideally the highest quality image will be the original .TIF, but .jpg or .png will work) into the following S3 bucket folder: https://fullstackcraft.s3.us-east-1.amazonaws.com/photography.chrisfrew.in/
 4. Add the new entries to `src/imageConfigItems.ts`, ensuring the file name is correct
 5. Run `npm run process-images` to generate the web-ready images
 6. Run `npm run image-doctor` to run a health check on the whole system

@@ -54,9 +54,8 @@ var client_s3_1 = require("@aws-sdk/client-s3");
 // Load environment variables
 dotenv_1.default.config();
 // Space configuration
-var SPACE_NAME = "coffee-app";
-var SPACE_REGION = "sfo2";
-var SPACE_ENDPOINT = "https://".concat(SPACE_REGION, ".digitaloceanspaces.com");
+var BUCKET_NAME = "fullstackcraft";
+var REGION = "us-east-1";
 var FOLDER_PREFIX = "photography.chrisfrew.in/";
 // Image processing configuration
 var MAX_WIDTH = 1750;
@@ -71,11 +70,10 @@ var ensureDirectoryExists = function (directory) {
 };
 var getSpaceClient = function () {
     return new client_s3_1.S3Client({
-        endpoint: SPACE_ENDPOINT,
-        region: SPACE_REGION,
+        region: REGION,
         credentials: {
-            accessKeyId: process.env.DO_SPACES_KEY || '',
-            secretAccessKey: process.env.DO_SPACES_SECRET || ''
+            accessKeyId: process.env.S3_KEY_ID || '',
+            secretAccessKey: process.env.S3_SECRET || ''
         }
     });
 };
@@ -92,7 +90,7 @@ var downloadImages = function () { return __awaiter(void 0, void 0, void 0, func
                 downloadedFiles = 0;
                 failedFiles = 0;
                 paginator = (0, client_s3_1.paginateListObjectsV2)({ client: client }, {
-                    Bucket: SPACE_NAME,
+                    Bucket: BUCKET_NAME,
                     Prefix: FOLDER_PREFIX
                 });
                 console.log('\nStarting download process...');
@@ -141,7 +139,7 @@ var downloadImages = function () { return __awaiter(void 0, void 0, void 0, func
             case 5:
                 _l.trys.push([5, 20, , 21]);
                 return [4 /*yield*/, client.send(new client_s3_1.GetObjectCommand({
-                        Bucket: SPACE_NAME,
+                        Bucket: BUCKET_NAME,
                         Key: obj.Key
                     }))];
             case 6:
@@ -305,8 +303,8 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 3, , 4]);
-                if (!process.env.DO_SPACES_KEY || !process.env.DO_SPACES_SECRET) {
-                    throw new Error("DO_SPACES_KEY and DO_SPACES_SECRET environment variables must be set");
+                if (!process.env.S3_KEY_ID || !process.env.S3_SECRET) {
+                    throw new Error("S3_KEY_ID and S3_SECRET environment variables must be set");
                 }
                 ensureDirectoryExists(ORIGINAL_IMAGES_DIR);
                 ensureDirectoryExists(PROCESSED_IMAGES_DIR);

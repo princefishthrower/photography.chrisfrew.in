@@ -12,9 +12,8 @@ import {
 dotenv.config()
 
 // Space configuration
-const SPACE_NAME = "coffee-app"
-const SPACE_REGION = "sfo2"
-const SPACE_ENDPOINT = `https://${SPACE_REGION}.digitaloceanspaces.com`
+const BUCKET_NAME = "fullstackcraft"
+const REGION = "us-east-1"
 const FOLDER_PREFIX = "photography.chrisfrew.in/"
 
 // Image processing configuration
@@ -33,11 +32,10 @@ const ensureDirectoryExists = (directory: string): void => {
 
 const getSpaceClient = (): S3Client => {
   return new S3Client({
-    endpoint: SPACE_ENDPOINT,
-    region: SPACE_REGION,
+    region: REGION,
     credentials: {
-      accessKeyId: process.env.DO_SPACES_KEY || '',
-      secretAccessKey: process.env.DO_SPACES_SECRET || ''
+      accessKeyId: process.env.S3_KEY_ID || '',
+      secretAccessKey: process.env.S3_SECRET || ''
     }
   })
 }
@@ -53,7 +51,7 @@ const downloadImages = async (): Promise<void> => {
     const paginator = paginateListObjectsV2(
       { client },
       {
-        Bucket: SPACE_NAME,
+        Bucket: BUCKET_NAME,
         Prefix: FOLDER_PREFIX
       }
     )
@@ -94,7 +92,7 @@ const downloadImages = async (): Promise<void> => {
         try {
           const { Body } = await client.send(
             new GetObjectCommand({
-              Bucket: SPACE_NAME,
+              Bucket: BUCKET_NAME,
               Key: obj.Key
             })
           )
@@ -188,8 +186,8 @@ const processImages = async (): Promise<void> => {
 
 const main = async (): Promise<void> => {
   try {
-    if (!process.env.DO_SPACES_KEY || !process.env.DO_SPACES_SECRET) {
-      throw new Error("DO_SPACES_KEY and DO_SPACES_SECRET environment variables must be set")
+    if (!process.env.S3_KEY_ID || !process.env.S3_SECRET) {
+      throw new Error("S3_KEY_ID and S3_SECRET environment variables must be set")
     }
 
     ensureDirectoryExists(ORIGINAL_IMAGES_DIR)
